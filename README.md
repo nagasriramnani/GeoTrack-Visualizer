@@ -3,10 +3,8 @@
 GeoTrack is a lightweight satellite image analysis tool designed to extract and visualise NDVI (Normalized Difference Vegetation Index) from multi-band satellite data. Built using Python, FastAPI, Leaflet.js, and rasterio, this application is structured for fast deployment and ease of use, especially in public health, environmental monitoring, and urban planning contexts.
 
 ## 🛰️ Sample NDVI Output
-
-![NDVI Sample](assets/image.png)
-
-<img src="assets/ndvi_output_sample.png" alt="NDVI Sample" width="600"/>
+<img src="assets/image.png" alt="NDVI Output" width="600"/>
+<img src="stats/stats.png" alt="NDVI Output" width="600"/>
 
 
 ## 🔍 Motivation

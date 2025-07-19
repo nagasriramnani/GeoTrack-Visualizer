@@ -23,7 +23,6 @@ env/
 # Raster image files and outputs
 *.tif
 *.jp2
-*.png
 *.jpg
 
 # NDVI and upload directories
@@ -48,3 +47,7 @@ build/
 # Misc
 *.bak
 *.swp
+
+# Allow images inside assets folder
+!assets/
+!assets/*.png
