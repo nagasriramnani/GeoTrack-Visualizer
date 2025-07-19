@@ -35,30 +35,6 @@ This project aligns with the goals of the IMAGO initiative, which seeks to unloc
 -📦 Additional routes (/lst) in the FastAPI backend
 -📌 Visualization using leaflet.js heat layers or color ramp overlays
 
-## 📂 Directory Structure
-
-GeoTrack-Visualizer/
-├── backend/
-│   └── app/
-│       ├── routes/         # FastAPI route handlers (NDVI APIs)
-│       ├── services/       # Image processing logic (NDVI stats, computation)
-│       ├── uploads/        # Input satellite band files (NIR, Red)
-│       ├── ndvi_outputs/   # Generated NDVI GeoTIFF outputs
-│       └── main.py         # FastAPI app entrypoint
-├── frontend/
-│   ├── index.html          # Main HTML UI
-│   ├── main.js             # Frontend JS logic for map + stats
-│   ├── style.css           # UI styling
-│   └── stats.html          # Optional stats page (if separated)
-├── assets/
-│   ├── image.png           # Screenshot of NDVI map
-│   └── stats.png           # Screenshot of NDVI statistics
-├── .gitignore
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
-
-
 
 ## 🚀 Technologies Used
 
@@ -81,6 +57,47 @@ GeoTrack showcases:
 - REST API principles for geospatial workflows
 - Full DevOps lifecycle compatibility (code, test, deploy, monitor)
 - Suitable foundation for extending to LST, urban heat, or flood risk models
+:
+
+🚀 Deployment Guide
+GeoTrack is fully containerized and ready for both local development and Azure deployment.
+
+##🧪 Local Development Setup
+# Clone the repository
+git clone https://github.com/nagasriramnani/GeoTrack-Visualizer.git
+cd GeoTrack-Visualizer
+# Create and activate virtual environment
+python3 -m venv geoenv
+source geoenv/bin/activate
+# Install dependencies
+pip install -r requirements.txt
+# Start the backend server
+uvicorn backend.app.main:app --reload
+Then open frontend/index.html in your browser (e.g., http://localhost:8080/index.html).
+#🐳 **Dockerized Run (Optional)**
+
+# Build and start the services
+docker-compose up --build
+Access the API at http://localhost:8000 and the frontend at your local static host.
+
+#**☁️ Azure Deployment (GitHub Integration)**
+Push your code to GitHub:
+git init
+git remote add origin https://github.com/nagasriramnani/GeoTrack-Visualizer.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+Go to Azure Portal > App Services > Create
+Runtime: Python 3.10
+Deployment source: GitHub
+Select the GeoTrack-Visualizer repo
+Enable Continuous Deployment
+Optionally connect to a docker-compose.yml
+Configure build and environment
+Use Docker or direct GitHub build
+Set port and startup command if needed (uvicorn backend.app.main:app --host 0.0.0.0 --port 8000)
+**Deploy and Test**
+Once deployed, your app will be live at the Azure-generated URL. You can test /docs or /ndvi/files for backend endpoints.
 
 ## 👤  Naga Sri Ram Kochetti. Msc in Big Data & High Performance Computing Liverpool
 📍 London, UK
