@@ -4,7 +4,10 @@ GeoTrack is a lightweight satellite image analysis tool designed to extract and 
 
 ## 🛰️ Sample NDVI Output
 
-![NDVI Sample](assets/ndvi_output_sample.png)
+![NDVI Sample](assets/image.png)
+
+<img src="assets/ndvi_output_sample.png" alt="NDVI Sample" width="600"/>
+
 
 ## 🔍 Motivation
 
