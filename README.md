@@ -59,45 +59,25 @@ GeoTrack showcases:
 - Suitable foundation for extending to LST, urban heat, or flood risk models
 :
 
-🚀 Deployment Guide
+#🚀 Deployment Guide
 GeoTrack is fully containerized and ready for both local development and Azure deployment.
 
-##🧪 Local Development Setup
-# Clone the repository
+#🧪 Local Development Setup
+## Clone the repository
 git clone https://github.com/nagasriramnani/GeoTrack-Visualizer.git
 cd GeoTrack-Visualizer
-# Create and activate virtual environment
+## Create and activate virtual environment
 python3 -m venv geoenv
 source geoenv/bin/activate
-# Install dependencies
+## Install dependencies
 pip install -r requirements.txt
-# Start the backend server
+## Start the backend server
 uvicorn backend.app.main:app --reload
 Then open frontend/index.html in your browser (e.g., http://localhost:8080/index.html).
-#🐳 **Dockerized Run (Optional)**
 
-# Build and start the services
-docker-compose up --build
-Access the API at http://localhost:8000 and the frontend at your local static host.
+##Azure DEPLOYMENT
+For Azure deployment we can use the Azure App services and we can deploy it from azure app services.
 
-#**☁️ Azure Deployment (GitHub Integration)**
-Push your code to GitHub:
-git init
-git remote add origin https://github.com/nagasriramnani/GeoTrack-Visualizer.git
-git add .
-git commit -m "Initial commit"
-git push -u origin main
-Go to Azure Portal > App Services > Create
-Runtime: Python 3.10
-Deployment source: GitHub
-Select the GeoTrack-Visualizer repo
-Enable Continuous Deployment
-Optionally connect to a docker-compose.yml
-Configure build and environment
-Use Docker or direct GitHub build
-Set port and startup command if needed (uvicorn backend.app.main:app --host 0.0.0.0 --port 8000)
-**Deploy and Test**
-Once deployed, your app will be live at the Azure-generated URL. You can test /docs or /ndvi/files for backend endpoints.
 
 ## 👤  Naga Sri Ram Kochetti. Msc in Big Data & High Performance Computing Liverpool
 📍 London, UK
