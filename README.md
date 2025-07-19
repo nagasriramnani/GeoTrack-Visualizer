@@ -79,7 +79,7 @@ Then open frontend/index.html in your browser (e.g., http://localhost:8080/index
 For Azure deployment we can use the Azure App services and we can deploy it from azure app services.
 
 
-## 👤  Naga Sri Ram Kochetti. Msc in Big Data & High Performance Computing Liverpool
+## 👤  Naga Sri Ram Kochetti. Msc in Big Data & High Performance Computing (UOL)
 📍 London, UK
 
 ## 🧪 Try Locally
