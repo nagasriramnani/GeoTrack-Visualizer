@@ -25,22 +25,39 @@ This project aligns with the goals of the IMAGO initiative, which seeks to unloc
 - 📁 Download processed NDVI GeoTIFF
 - 🧩 Modular FastAPI backend, ideal for scale-up or extension
 
+##🔭 Future Scope: Land Surface Temperature (LST)
+
+-While NDVI captures vegetation health, Land Surface Temperature (LST) is crucial for environmental monitoring, urban heat analysis, and public health planning.
+-In future versions, GeoTrack will support:
+-🌡️ LST computation from Landsat Band 10 (thermal infrared)
+-📊 Integration of LST with NDVI for multi-dimensional analytics
+-🗺️ Layer toggle to compare vegetation and surface heat
+-📦 Additional routes (/lst) in the FastAPI backend
+-📌 Visualization using leaflet.js heat layers or color ramp overlays
+
 ## 📂 Directory Structure
 
-GeoTrack/
+GeoTrack-Visualizer/
 ├── backend/
-│ ├── app/
-│ │ ├── routes/ # FastAPI route handlers
-│ │ ├── services/ # Image processing logic
-│ │ ├── uploads/ # Input band files
-│ │ └── ndvi_outputs/ # Processed NDVI GeoTIFFs
-│ └── main.py # API entrypoint
+│   └── app/
+│       ├── routes/         # FastAPI route handlers (NDVI APIs)
+│       ├── services/       # Image processing logic (NDVI stats, computation)
+│       ├── uploads/        # Input satellite band files (NIR, Red)
+│       ├── ndvi_outputs/   # Generated NDVI GeoTIFF outputs
+│       └── main.py         # FastAPI app entrypoint
 ├── frontend/
-│ ├── index.html
-│ ├── main.js
-│ ├── style.css
+│   ├── index.html          # Main HTML UI
+│   ├── main.js             # Frontend JS logic for map + stats
+│   ├── style.css           # UI styling
+│   └── stats.html          # Optional stats page (if separated)
+├── assets/
+│   ├── image.png           # Screenshot of NDVI map
+│   └── stats.png           # Screenshot of NDVI statistics
+├── .gitignore
 ├── docker-compose.yml
+├── requirements.txt
 └── README.md
+
 
 
 ## 🚀 Technologies Used
