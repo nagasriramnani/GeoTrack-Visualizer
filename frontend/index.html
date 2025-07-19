@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NDVI Viewer</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h2>🛰️ NDVI Viewer</h2>
+    <div class="controls">
+      <button id="download-ndvi">⬇️ Download NDVI Output</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="map"></div>
+
+    <section id="legend">
+      <h4>NDVI Scale</h4>
+      <div class="legend-scale">
+        <div style="background-color: #d73027;"></div>
+        <div style="background-color: #f46d43;"></div>
+        <div style="background-color: #fdae61;"></div>
+        <div style="background-color: #fee08b;"></div>
+        <div style="background-color: #d9ef8b;"></div>
+        <div style="background-color: #a6d96a;"></div>
+        <div style="background-color: #66bd63;"></div>
+        <div style="background-color: #1a9850;"></div>
+      </div>
+      <div class="legend-labels">
+        <span>-1 (Urban)</span>
+        <span>0</span>
+        <span>+1 (Vegetation)</span>
+      </div>
+      <p class="legend-description">
+        <strong>Red</strong>: Non-vegetated or urban<br>
+        <strong>Yellow</strong>: Transition<br>
+        <strong>Green</strong>: Vegetated
+      </p>
+    </section>
+
+    <section class="ndvi-container">
+      <h4 class="ndvi-heading">📊 NDVI Statistics</h4>
+      <div class="ndvi-content">
+        <div class="ndvi-stats-text" id="ndvi-stats-text"></div>
+        <div class="ndvi-histogram">
+          <img id="ndvi-histogram" src="" alt="NDVI Histogram"/>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/geotiff"></script>
+  <script src="https://unpkg.com/georaster"></script>
+  <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS metadata
+.DS_Store
+
+# Python virtual environments
+venv/
+env/
+.venv/
+.geoenv/
+
+# FastAPI and app artifacts
+*.log
+*.sqlite3
+*.db
+
+# Raster image files and outputs
+*.tif
+*.jp2
+*.png
+*.jpg
+
+# NDVI and upload directories
+backend/app/uploads/
+backend/app/ndvi_outputs/
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+
+# Node.js / frontend cache (if any later)
+node_modules/
+dist/
+build/
+
+# Environment variable files
+.env
+
+# Git LFS pointer files (if accidentally added)
+*.lfs
+
+# Misc
+*.bak
+*.swp
